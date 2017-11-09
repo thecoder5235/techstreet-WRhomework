@@ -70,3 +70,39 @@ export class AddUserComponent implements OnInit {
 
   firstNamevalidator(firstName) {
     if( firstName !== null) {
+      let regx = '[a-zA-Z][a-zA-Z0-9\s]*' ;
+      if(firstName.match(regx)) {
+          return true;
+      } else {
+          return false;
+      }
+    }
+    return false;
+  }
+
+  lastNameValidator(lastName) {
+    if( lastName !== null) {
+      let regx = '[a-zA-Z][a-zA-Z0-9\s]*' ;
+      if(lastName.match(regx)) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    return false;
+  }
+
+  emailValidator(email) {
+    if( email !== null) {
+      let regx = '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$' ;
+      if(email.match(regx)) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    return false;
+  }
+
+
+}
