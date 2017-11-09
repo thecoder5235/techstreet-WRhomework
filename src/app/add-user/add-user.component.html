@@ -1,1 +1,29 @@
+<h3>
+  Add User
+</h3>
 
+<div>
+  <form [formGroup]="myForm" (submit)="save(myForm.value)" novalidate>
+    <div>
+      <label>First Name*</label>
+      <input type="text" formControlName="first_name"   required />
+      <small *ngIf="firstNameStatus && myForm.controls.first_name.pristine">{{firstNameError}}</small>
+    </div>
+    <div>
+      <label>Last Name*</label>
+      <input type="text" formControlName="last_name" required />
+      <small *ngIf="lastNameStatus && myForm.controls.last_name.pristine">{{lastNameError}}</small>
+    </div>
+    <div>
+      <label>Email*</label>
+      <input type="text" formControlName="email" required />
+      <small *ngIf="emailStatus && myForm.controls.email.pristine">{{emailError}}</small>
+    </div>
+
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+
+
+</div>
