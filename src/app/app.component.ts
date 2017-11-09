@@ -7,5 +7,5 @@ import { AngularMessageComponent } from '../angular/message.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Techstreet Homework';
+  title = 'Techstreet Homework solution by William Rosati 11/9/2017 ';
 }
